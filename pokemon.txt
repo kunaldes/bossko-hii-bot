@@ -1,0 +1,151 @@
+Bulbasaur, Vine Whip
+Ivysaur, Razor Leaf
+Venusaur, Solar Beam
+Charmander, Ember
+Charmeleon, Flamethrower
+Charizard, Fireblast
+Squirtle, Bubble
+Wartortle, Water Gun
+Blastoise, Hydro Pump
+Caterpie, String Shot
+Metapod, Harden
+Butterfree, Poisonpowder
+Weedle, Poison Sting
+Kakuna, Harden
+Beedrill, Twinneedle
+Pidgey, Gust
+Pidgeotto, Wing Attack
+Pidgeot, Sky Attack
+Rattata, Hyper Fang
+Raticate, Super Fang
+Spearow, Peck
+Fearow, Mirror Move
+Ekans, Wrap
+Arbok, Acid
+Pikachu, Thundershock
+Raichu, Thunderbolt
+Sandshrew, Sand Attack
+Sandslash, Fury Swipes
+Nidoran (f), Growl
+Nidorina, Double Kick
+Nidoqueen, Body Slam
+Nidoran (m), Horn Attack
+Nidorino, Double Kick
+Nidoking, Thrash
+Clefairy, Pound
+Clefable, Doubleslap
+Vulpix, Roar
+Ninetales, Fire Spin
+Jigglypuff, Sing
+Wigglytuff, Metronome
+Zubat, Leech Life
+Golbat, Haze
+Oddish, Absorb
+Gloom, Sleep Powder
+Vileplume, Giga Drain
+Paras, Stun Spore
+Parasect, Spore
+Venonat, Poisonpowder
+Venomoth, Psybeam
+Diglett, Dig
+Dugtrio, Earthquake
+Meowth, Pay Day
+Persian, Fury Swipes
+Psyduck, Disable
+Golduck, Confusion
+Mankey, Leer
+Primeape, Focus Energy
+Growlithe, Roar
+Arcanine, Flamethrower
+Poliwag, Bubble
+Poliwhirl, Water Gun
+Poliwrath, Body Slam
+Abra, Teleport
+Kadabra, Psywave
+Alakazam, Psychic
+Machop, Karate Chop
+Machoke, Low Kick
+Machamp, Submission
+Bellsprout, Growth
+Weepinbell, Vine Whip
+Victreebel, Razor Leaf
+Tentacool, Barrier
+Tentacruel, Acid
+Geodude, Defense Curl
+Graveler, Rock Throw
+Golem, Explosion
+Ponyta, Ember
+Rapidash, Stomp
+Slowpoke, Amnesia
+Slowbro, Headbutt
+Magnemite, Sonicboom
+Magneton, Swift
+Farfetch'd, Swords Dance
+Doduo, Fury Attack
+Dodrio, Tri Attack
+Seel, Headbutt
+Dewgong, Ice Beam
+Grimer, Diable
+Muk, Sludge
+Shellder, Clamp
+Cloyster, Aurora beam
+Gastly, Confuse Ray
+Haunter, Night Shade
+Gengar, Dreameater
+Onix, Rock Slide
+Drowzee, Meditate
+Hypno, Hypnosis
+Krabby, ViceGrip
+Kingler, Crabhammer
+Voltorb, Sonicboom
+Electrode, Selfdestruct
+Exeggcute, Barrage
+Exeggutor, Reflect
+Cubone, Bone Club
+Marowak, Bonemerang
+Hitmonlee, Hi Jump Kick
+Hitmonchan, Mega Punch
+Lickitung, Lick
+Koffing, Smokescreen
+Weezing, Selfdestruct
+Rhyhorn, Horn Attack
+Rhydon, Horn Drill
+Chansey, Softboiled
+Tangela, Growth
+Kangaskhan, Dizzy Punch
+Horsey, Bubble
+Seadra, Agility
+Goldeen, Supersonic
+Seaking, Waterfall
+Staryu, Recover
+Starmie, Bubblebeam
+Mr. Mime, Light Screen
+Scyther, False Swipe
+Jynx, Lovely Kiss
+Electabuzz, Thunderpunch
+Magmar, Fire Punch
+Pinsir, Guillotine
+Tauros, Take Down
+Magikarp, Splash
+Gyarados, Hyper Beam
+Lapras, Surf
+Ditto, Transform
+Eevee, Tackle
+Vaporeon, Acid Armor
+Jolteon, Pin Missile
+Flareon, Fire Spin
+Porygon, Psybeam
+Omanyte, Water Gun
+Omastar, Spike Cannon
+Kabuto, Harden
+Kabutops, Slash
+Aerodactyl, Hyper Beam
+Snorlax, Rest
+Articuno, Blizzard
+Zapdos, Thunder
+Moltres, Leer
+Dratini, Wrap
+Dragonair, Slam
+Dragonite, Dragon Rage
+Mewtwo, Psychic
+Mew, BOSSKO-HII
