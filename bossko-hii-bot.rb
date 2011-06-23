@@ -34,7 +34,7 @@ class Seen
         elsif @users.key? nick.downcase
             m.reply @users[nick.downcase].to_s
         else
-            m.reply "I haven't seen #{nick.split(" ")[0]}"
+            m.reply "I haven't seen #{nick}"
         end
     end
 end
@@ -123,7 +123,7 @@ class BTC
                 m.reply thing["username"] + " has " + 
                     (thing["unconfirmed_reward"].to_f + 
                     thing["confirmed_reward"].to_f).round(8).to_s +
-                    "BTC in the mining pool"
+                    " BTC in the mining pool"
             rescue JSON::ParserError
                 m.reply "API Key invalidated. Type \"/msg #{@bot.nick} btc_api help\" for instructions"
             end
