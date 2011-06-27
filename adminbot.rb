@@ -6,7 +6,7 @@ class Kick
     match /k ([^ ]+) ?(.*)/
     
     def execute(m, nick, reason)
-        if m.channel.opped? m.user
+        if (m.channel.opped? m.user) && (nick.downcase != @bot.nick.downcase)
             m.channel.kick(nick, reason)
         end
     end
