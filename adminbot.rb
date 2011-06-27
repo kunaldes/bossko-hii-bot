@@ -1,6 +1,16 @@
 require 'cinch'
 
-
+class Kick
+    include Cinch::Plugin
+    prefix "."
+    match /k ([^ ]+) ?(.*)/
+    
+    def execute(m, nick, reason)
+        if m.channel.opped? m.user
+            m.channel.kick(nick, reason)
+        end
+    end
+end
 
 
 adminbot = Cinch::Bot.new do
@@ -12,7 +22,7 @@ adminbot = Cinch::Bot.new do
         f = File.new("admin-credentials.txt")
         c.password = f.readline
         f.close
-        c.plugins.plugins = []
+        c.plugins.plugins = [Kick]
     end
 end
 
