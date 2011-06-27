@@ -179,7 +179,10 @@ class Penis
     match /penis$/
     
     def execute(m)
-        m.channel.action "notes that " + m.user.nick + "'s penis appears to be " + rand(12).to_s + " inches long"
+        if(m.user.nick == "kunald")
+            m.channel.action "notes that " + m.user.nick + "'s penis appears to be -" + rand(12).to_s + " inches long"
+        else
+            m.channel.action "notes that " + m.user.nick + "'s penis appears to be " + rand(12).to_s + " inches long"
     end
 end
 
