@@ -174,6 +174,15 @@ class BTC
     end
 end
 
+class Penis
+    include Cinch::Plugin
+    match /penis$/
+    
+    def execute(m)
+        m.channel.action "notes that " + m.user.nick + "'s penis appears to be " + rand(12).to_s + " inches long"
+    end
+end
+
 #if __name__...loljk python sucks
 
 bot = Cinch::Bot.new do
@@ -181,7 +190,7 @@ bot = Cinch::Bot.new do
         c.server   = 'irc.freenode.net'
         c.channels = ["#bossko-hii"]
         c.nick = 'kunalbo'
-        c.plugins.plugins  = [Seen, Choose, BTC]
+        c.plugins.plugins  = [Seen, Choose, BTC, Penis]
     end
 end
 
