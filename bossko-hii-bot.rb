@@ -48,19 +48,8 @@ class Choose
         end
     end
     
-    def initialize(*args)
-        super
-        pkmn = File.open('pokemon.txt')
-        @pokemon = {}
-        pkmn.each_line do |pkline|
-            pk = pkline.split(",").map{|x| x.strip.upcase}
-            @pokemon[pk[0]] = pk[1]
-        end
-    end
-
     include Cinch::Plugin
     match /choose (.+)/
-    match /choose$/, method: :pokefun
     prefix(pick)
 
     def execute(m, mesg)
@@ -73,12 +62,6 @@ class Choose
         else
             m.user.msg "herp derp what 2 choose"
         end
-    end
-    
-    def pokefun(m)
-        poke = @pokemon.keys[rand(@pokemon.keys.length)]
-        m.reply "I choose you! #{poke}!"
-        m.reply "#{poke} used #{@pokemon[poke]}!"
     end
 end
 
@@ -179,10 +162,30 @@ class Penis
     match /penis$/
     
     def execute(m)
-        if(m.user.nick == "kunald")
-            m.channel.action "notes that " + m.user.nick + "'s penis appears to be -" + rand(12).to_s + " inches long"
-        else
-            m.channel.action "notes that " + m.user.nick + "'s penis appears to be " + rand(12).to_s + " inches long"
+        m.channel.action "notes that " + m.user.nick +
+                         "'s penis appears to be " + rand(13).to_s +
+                         " inches long"
+    end
+end
+
+class PokeChoose
+    include Cinch::Plugin
+    match /choose$/
+    
+    def initialize(*args)
+        super
+        pkmn = File.open('pokemon.txt')
+        @pokemon = {}
+        pkmn.each_line do |pkline|
+            pk = pkline.split(",").map{|x| x.strip.upcase}
+            @pokemon[pk[0]] = pk[1]
+        end
+    end
+    
+    def execute(m)
+        poke = @pokemon.keys[rand(@pokemon.keys.length)]
+        m.reply "I choose you! #{poke}!"
+        m.reply "#{poke} used #{@pokemon[poke]}!"
     end
 end
 
@@ -193,9 +196,8 @@ bot = Cinch::Bot.new do
         c.server   = 'irc.freenode.net'
         c.channels = ["#bossko-hii"]
         c.nick = 'kunalbo'
-        c.plugins.plugins  = [Seen, Choose, BTC, Penis]
+        c.plugins.plugins  = [Seen, Choose, BTC, Penis, PokeChoose]
     end
 end
 
 bot.start
-
