@@ -5,12 +5,17 @@ require 'net/http'
 class Seen
     class LeavingStruct < Struct.new(:who, :time)
         def to_s
-            "#{who} was seen leaving here at #{time.asctime}"
+            t = (Time.now - time).to_i
+            day, t = t/86400, t%86400
+            hour, t = t/3600, t%3600
+            min, t = t/60, t%60
+            "#{who} was seen leaving here #{day} days #{hour} hours #{min} minutes and #{t} seconds ago"
         end
     end
 
     include Cinch::Plugin
     listen_to :part
+    listen_to :quit
     match /seen (.+)/
 
     def initialize(*args)
@@ -55,12 +60,30 @@ class Choose
     def execute(m, mesg)
         if mesg.split(",").length > 1
             q = mesg.split(",").map{|x| x.strip}
-            m.reply q[rand(q.length)]
+            m.reply (m.user.to_s + ": " + q[rand(q.length)])
         elsif mesg.split(" ").length > 1
             q = mesg.split(" ").map{|x| x.strip}
-            m.reply q[rand(q.length)]
+            m.reply (m.user.to_s + ": " + q[rand(q.length)])
         else
             m.user.msg "herp derp what 2 choose"
+        end
+    end
+end
+
+class Order
+    include Cinch::Plugin
+    match /order (.+)/
+    prefix "."
+    
+    def execute(m, mesg)
+        if mesg.split(",").length > 1
+            q = mesg.split(",").map{|x| x.strip}
+            m.reply (m.user.to_s + ": " + q.shuffle!.join(", "))
+        elsif mesg.split(" ").length > 1
+            q = mesg.split(" ").map{|x| x.strip}
+            m.reply (m.user.to_s + ": " + q.shuffle!.join(", "))
+        else
+            m.user.msg "herp derp what 2 order"
         end
     end
 end
@@ -157,16 +180,6 @@ class BTC
     end
 end
 
-class Penis
-    include Cinch::Plugin
-    match /penis$/
-    
-    def execute(m)
-        m.channel.action "notes that " + m.user.nick +
-                         "'s penis appears to be " + rand(13).to_s +
-                         " inches long"
-    end
-end
 
 class PokeChoose
     include Cinch::Plugin
@@ -189,14 +202,25 @@ class PokeChoose
     end
 end
 
-#if __name__...loljk python sucks
+class CTCP_Reply
+    include Cinch::Plugin
+    listen_to :ctcp
+    
+    def listen(m)
+        if m.ctcp_message.downcase == "version"
+            m.ctcp_reply "Cinch IRC Bot version 0.1"
+        end
+    end
+end
+
+
 
 bot = Cinch::Bot.new do
     configure do |c|
         c.server   = 'irc.freenode.net'
         c.channels = ["#bossko-hii"]
-        c.nick = 'kunalbo'
-        c.plugins.plugins  = [Seen, Choose, BTC, Penis, PokeChoose]
+        c.nick = 'kunaldbot'
+        c.plugins.plugins  = [Choose, Order, CTCP_Reply]
     end
 end
 
