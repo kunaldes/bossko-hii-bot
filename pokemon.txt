@@ -148,4 +148,3 @@ Dratini, Wrap
 Dragonair, Slam
 Dragonite, Dragon Rage
 Mewtwo, Psychic
-Mew, GOFUCKYOURSELF
